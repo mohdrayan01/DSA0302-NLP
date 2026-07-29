@@ -1,0 +1,5 @@
+cat -> cats
+bus -> buses
+box -> boxes
+baby -> babies
+church -> churches

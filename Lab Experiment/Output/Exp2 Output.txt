@@ -1,0 +1,6 @@
+ab -> Accepted
+aab -> Accepted
+abab -> Accepted
+abc -> Rejected
+baa -> Rejected
+cab -> Accepted

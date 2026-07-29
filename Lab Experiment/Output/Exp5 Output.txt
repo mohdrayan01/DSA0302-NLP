@@ -1,0 +1,5 @@
+playing -> play
+running -> run
+studies -> studi
+happiness -> happi
+easily -> easili

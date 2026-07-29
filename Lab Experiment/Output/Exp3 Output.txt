@@ -1,0 +1,6 @@
+Word            	Stem           Lemma
+running         	run              running
+played          	play             played
+studies         	studi            study
+better          	better          better
+cars            	car               car
