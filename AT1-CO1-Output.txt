@@ -1,0 +1,99 @@
+Question 1 Output:
+
+RESUME INFORMATION EXTRACTION
+============================================================
+
+Candidate Profile
+------------------------------
+Name        : Arjun Kumar
+Email       : arjun.kumar@gmail.com
+Mobile      : 9876543210
+Skills      : Python, SQL, Machine Learning, NLP
+Experience  : 3 Years
+
+Candidate Profile
+------------------------------
+Name        : Priya Sharma
+Email       : priya123@yahoo.com
+Mobile      : +91-9123456789
+Skills      : Java, SQL
+Experience  : 1 Years
+
+Candidate Profile
+------------------------------
+Name        : Rahul Verma
+Email       : rahul.verma@company.in
+Mobile      : 9988776655
+Skills      : Python, Java, SQL
+Experience  : 5 Years
+
+Eligible Candidates
+------------------------------
+Arjun Kumar
+Rahul Verma
+
+
+
+Question 2 Output:
+
+============================================================
+E-COMMERCE PRODUCT SEARCH SYSTEM
+============================================================
+
+Exact Keyword Search
+----------------------------------------
+Python Basics
+Total Matches: 1
+
+Prefix Search
+----------------------------------------
+Python Programming Book
+Python Basics
+Python Cookbook
+Total Matches: 3
+
+Suffix Search
+----------------------------------------
+Gaming Laptop
+Total Matches: 1
+
+Partial Keyword Search
+----------------------------------------
+Laptop Stand
+Gaming Laptop
+Laptop Bag
+Total Matches: 3
+
+Case-Insensitive Search
+----------------------------------------
+Python Programming Book
+Python Basics
+Python Cookbook
+Total Matches: 3
+
+============================================================
+SEARCH REPORT
+============================================================
+Exact Keyword                 : 1
+Prefix Search                 : 3
+Suffix Search                 : 1
+Partial Search                : 3
+Case-Insensitive Search       : 3
+
+
+
+Question 3 Output:
+
+============================================================
+UNIVERSITY STUDENT REGISTRATION VALIDATION
+============================================================
+Register Number : Valid
+Institutional Email : Valid
+Course Code : Valid
+Semester : Valid
+Mobile Number : Valid
+
+============================================================
+FINAL REGISTRATION STATUS
+============================================================
+Registration Successful
