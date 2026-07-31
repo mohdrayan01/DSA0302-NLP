@@ -1,0 +1,43 @@
+Question 1 Output: 
+===========================================================================
+Word           Root           Suffix    Type              Normalized     
+===========================================================================
+connected      connect        ed        Inflectional      connect        
+connecting     connect        ing       Inflectional      connect        
+connection     connect        ion       Derivational      connect        
+
+
+Question 2 Output: 
+=====================================================================================
+Word        Prefix    Root        Suffix    Type              Normalized     
+=====================================================================================
+unhappy     un        happy       -         Derivational      happy
+happiness   -         happy       ness      Derivational      happy
+happily     -         happy       ly        Derivational      happy
+
+
+Question3 Output:
+==========================================================================================
+Word        Stem        Removed Affix  Type              Normalized
+==========================================================================================
+played      play        ed             Inflectional      play
+player      play        er             Derivational      play
+playing     play        ing            Inflectional      play
+
+
+Question 4 Output:
+========================================================================================================================
+Word        Root        Suffix    Pattern     State Transition                   Normalized
+========================================================================================================================
+writes      write       s         Regular     Start -> write -> s -> Final       write
+writing     write       ing       Regular     Start -> write -> ing -> Final     write
+written     write       en        Irregular   Start -> write -> en -> Final      write
+
+
+Question 5 Output:
+==========================================================================================
+Word           Applied Rule                  Intermediate        Final Stem     
+==========================================================================================
+relational     Remove 'ational'              relate              relat
+relation       Remove 'ion'                  relat               relat
+relate         Remove final 'e'              relat               relat
