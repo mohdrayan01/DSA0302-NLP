@@ -1,0 +1,11 @@
+Before Transformation:
+I -> PRP
+can -> NN
+play -> NN
+football -> NN
+
+After Transformation:
+I -> PRP
+can -> NN
+play -> VB
+football -> NN

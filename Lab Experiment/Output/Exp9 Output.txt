@@ -1,0 +1,1 @@
+[('The', 'NN'), ('dog', 'NN'), ('is', 'NNS'), ('running', 'VBG'), ('quickly', 'RB')]

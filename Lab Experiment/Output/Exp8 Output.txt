@@ -1,0 +1,4 @@
+POS Tags:
+book -> NN
+is -> VBZ
+beautiful -> JJ
