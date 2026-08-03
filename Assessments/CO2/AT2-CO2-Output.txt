@@ -1,0 +1,44 @@
+Question 1 Output:
+
+===============================================================================================
+Word           Root           Prefix    Suffix    Type              Normalized     
+===============================================================================================
+analyzing      analyze        -         ing       Inflectional      analyze        
+analysis       analyze        -         sis       Derivational      analyze        
+analytical     analyze        -         ical      Derivational      analyze        
+
+Question 2 Output:
+
+========================================================================================================================
+Word           Prefix    Root        Suffix    Type              Semantic Meaning              Normalized
+========================================================================================================================
+disagree       dis       agree       -         Derivational      Opposite meaning              agree
+agreement      -         agree       ment      Derivational      State or result of agreeing   agree
+agreeable      -         agree       able      Derivational      Capable of being agreed with  agree
+
+Question 3 Output:
+
+===============================================================================================
+Word           Root           Affix          Derivational Level  Normalized
+===============================================================================================
+govern         govern         -              Level 0             govern
+government     govern         ment           Level 1             govern
+governance     govern         ance           Level 1             govern
+
+Question 4 Output:
+
+========================================================================================================================
+Word           Prefix    Root           Suffix    Derivational Sequence         Normalized     Parsed Form
+========================================================================================================================
+activate       -         activate       -         Base Form                     activate       - + activate + -
+activation     -         activate       ion       activate + ion                activate       - + activate + ion
+reactivation   re        activate       ion       re + activate + ion           activate       re + activate + ion
+
+Question 5 Output:
+
+==============================================================================================================
+Word           Suffix    Grammatical Category     Root           Normalized     Final Output
+==============================================================================================================
+create         -         Base Form                create         create         create
+creates        s         Third Person Singular    create         create         create
+creating       ing       Present Participle       create         create         create
