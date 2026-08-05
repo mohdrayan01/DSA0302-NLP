@@ -1,0 +1,2 @@
+Enter a sentence: He is a football player                
+Sentence Agreement: Correct

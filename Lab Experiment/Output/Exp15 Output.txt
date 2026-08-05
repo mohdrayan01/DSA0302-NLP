@@ -1,0 +1,1 @@
+(S (NP John) (VP (V chased) (NP (Det the) (N dog)))) (p=0.12)

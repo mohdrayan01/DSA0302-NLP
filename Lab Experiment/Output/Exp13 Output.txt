@@ -1,0 +1,10 @@
+(S (NP (Det the) (N boy)) (VP (V kicked) (NP (Det a) (N ball))))
+              S
+      ________|_____
+     |              VP
+     |         _____|___        
+     NP       |         NP
+  ___|___     |      ___|___
+Det      N    V    Det      N
+ |       |    |     |       |
+the     boy kicked  a      ball
