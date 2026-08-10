@@ -1,0 +1,279 @@
+Question 1 Output:
+======================================================================
+Q1 - BIOMEDICAL MORPHOLOGICAL ERROR ANALYSIS
+======================================================================
+Total Tokens: 6
+
+Word            Stem            Type            Observation
+infection      infect         Derivational   Acceptable
+infectious     infecti        Derivational   Information loss
+infected       infect         Inflectional   Acceptable
+infect         infect         Base           Acceptable
+infections     infect         Inflectional   Acceptable
+infecting      infect         Inflectional   Acceptable
+
+Morphological Structure:
+infect -> Base
+infected -> infect + ed -> Inflectional
+infecting -> infect + ing -> Inflectional
+infections -> infection + s -> Inflectional
+infection -> infect + ion -> Derivational
+infectious -> infect + ious -> Derivational
+
+Conclusion:
+Inflectional and derivational morphology should be treated separately because derivational suffixes can change meaning or word class.
+
+
+Question 2 Output:
+======================================================================
+Q2 - FINITE-STATE MORPHOLOGICAL PARSER
+======================================================================
+
+Before Correction
+happiest -> ('', 'happi', 'est')
+unbelievable -> ('un', 'believ', 'able')
+running -> ('', 'runn', 'ing')
+reordering -> ('re', 'order', 'ing')
+smartphones -> ('', 'smartphone', 's')
+unreadable -> ('un', 'read', 'able')
+Accuracy Before: 50.0 %
+
+After Correction
+happiest -> ('', 'happ', 'iest')
+unbelievable -> ('un', 'believ', 'able')
+running -> ('', 'run', 'ing')
+reordering -> ('re', 'order', 'ing')
+smartphones -> ('', 'smartphone', 's')
+unreadable -> ('un', 'read', 'able')
+Accuracy After: 66.66666666666666 %
+Accuracy Improvement: 16.666666666666657 %
+Processing Time: 0.0 seconds
+
+FST Transitions:
+START -> PREFIX -> ROOT -> SUFFIX -> FINAL
+START -> ROOT -> SUFFIX -> FINAL
+
+Complexity: O(L(P+S))
+where L=word length, P=number of prefixes, S=number of suffixes.
+
+
+Question 3 Output:
+======================================================================
+Q3 - NEWS ARTICLE STEMMING ERROR ANALYSIS
+======================================================================
+
+WITHOUT STEMMING
+Vocabulary: 19
+Accuracy: 100.0 %
+Time: 0.009813 seconds
+
+PORTER STEMMING
+Vocabulary: 14
+Accuracy: 100.0 %
+Time: 0.008982 seconds
+
+LEMMATIZATION
+Vocabulary: 16
+Accuracy: 100.0 %
+Time: 0.007812 seconds
+
+Porter Stemming Analysis:
+organization -> organ
+organizer -> organ
+organizing -> organ
+organized -> organ
+running -> run
+runner -> runner
+studies -> studi
+studying -> studi
+relational -> relat
+relation -> relat
+conditional -> condit
+universities -> univers
+university -> univers
+connection -> connect
+connected -> connect
+connecting -> connect
+happiness -> happi
+happily -> happili
+analysis -> analysi
+analytical -> analyt
+
+Conclusion:
+Lemmatization generally preserves more semantic information than aggressive Porter stemming.
+
+
+Question 4 Output:
+======================================================================
+Q4 - E-COMMERCE MORPHOLOGICAL ERROR ANALYSIS
+======================================================================
+
+Word            Stem            Type
+watches        watch          Inflectional
+watching       watch          Inflectional
+washable       washabl        Derivational
+washer         washer         Derivational
+washed         wash           Inflectional
+
+Morphological Breakdown:
+watches -> watch + es -> Inflectional
+watching -> watch + ing -> Inflectional
+washed -> wash + ed -> Inflectional
+washable -> wash + able -> Derivational
+washer -> wash + er -> Derivational
+
+Improved Normalization:
+watches -> watch
+watching -> watch
+washable -> washable
+washer -> washer
+washed -> wash
+
+Recommendation:
+Remove grammatical inflections during normalization.
+Preserve important derivational forms because they can represent different product meanings.
+Pipeline: Tokenization -> Morphological Analysis -> Inflectional Normalization -> Controlled Derivational Normalization -> Indexing
+
+
+Question 5 Output:
+======================================================================
+Q5 - PORTER STEMMING ERROR ANALYSIS
+======================================================================
+
+Coding Error:
+data["Processed"]=data["Text"].apply(ps.stem)
+ps.stem() processes one word, not an entire document.
+
+Original vs Stemmed:
+                                                Text                                Processed
+0  The government announced new technology policies.  the govern announc new technolog polici
+1           The organization developed new software.            the organ develop new softwar
+2   The company is organizing a business conference.       the compani is organ a busi confer
+
+20 Stemming Cases:
+Word                    Stem            Type
+organization        organ               Derivational
+organizer           organ               Derivational
+organizing          organ               Derivational
+organized           organ               Derivational
+running             run                 Inflectional
+runner              runner              Derivational
+runs                run                 Inflectional
+studies             studi               Inflectional
+studying            studi               Inflectional
+studied             studi               Inflectional
+relational          relat               Derivational
+relation            relat               Derivational
+conditional         condit              Derivational
+universities        univers             Derivational
+university          univers             Derivational
+connection          connect             Derivational
+connected           connect             Inflectional
+connecting          connect             Inflectional
+happiness           happi               Derivational
+
+Examples of information loss:
+organization -> organ
+happiness -> happi
+relational -> relat
+analysis -> analysi
+Porter stemming is not a true morphological analyzer and may produce non-dictionary stems.
+
+
+Question 6 Output:
+======================================================================
+Q6 - FINITE-STATE PLURAL MORPHOLOGICAL PARSER
+======================================================================
+
+Original Parser:
+cars -> ('ca', 'Plural Noun')
+boxes -> ('box', 'Plural Noun')
+cities -> ('citi', 'Plural Noun')
+children -> ('children', 'Singular')
+
+Errors:
+word[:-2] removes two characters from every plural.
+It fails for regular -s, -es, -ies and irregular plurals.
+
+Corrected Parser:
+cars           car            Regular Plural
+books          book           Regular Plural
+boxes          box            Plural -es
+buses          bus            Plural -es
+cities         city           Plural -ies
+babies         baby           Plural -ies
+children       child          Irregular Plural
+men            man            Irregular Plural
+women          woman          Irregular Plural
+people         person         Irregular Plural
+mouse          mouse          Singular
+
+FST Transitions:
+Regular: START -> ROOT -> s -> FINAL
+-es: START -> ROOT -> es -> FINAL
+-ies: START -> ROOT(y) -> ies -> FINAL
+Irregular: START -> LEXICON -> ROOT -> FINAL
+
+WordNet:
+car
+a motor vehicle with four wheels; usually propelled by an internal combustion engine
+a wheeled vehicle adapted to the rails of railroad
+box
+a (usually rectangular) container; may have a lid
+private area in a theater or grandstand where a small group can watch the performance
+city
+a large and densely populated urban area; may include several independent administrative districts
+an incorporated administrative district established by state charter
+child
+a young person of either sex
+a human offspring (son or daughter) of any age
+
+Limitations:
+Rule-based parsers require manually defined rules, have difficulty with irregular and unknown words, and may struggle with ambiguity, slang and spelling errors.
+
+
+Question 7 Output:
+======================================================================
+Q7 - MORPHOLOGICAL FEATURE EXTRACTION ERROR ANALYSIS
+======================================================================
+
+1. ORIGINAL PREPROCESSING ERROR
+Original Vocabulary: ['organization' 'organized' 'organizer' 'runners' 'running' 'runs'
+ 'studied' 'studies' 'studying']
+Stemmed Feature Names: ['organ', 'organ', 'organ', 'runner', 'run', 'run', 'studi', 'studi', 'studi']
+Error: Stemming is performed after feature extraction.
+This creates redundant vocabulary columns.
+
+2. CORRECTED PIPELINE
+Processed Documents:
+run runner run
+studi studi studi
+organ organ organ
+Corrected Vocabulary: ['organ' 'run' 'runner' 'studi']
+Vocabulary Size: 4
+
+3. LOADING SMALL 20 NEWSGROUPS DATASET
+Training Documents: 500
+Testing Documents: 200
+
+4. WITHOUT STEMMING
+Vocabulary Size: 5000
+Accuracy: 85.5 %
+Processing Time: 0.22 seconds
+
+5. WITH STEMMING
+Vocabulary Size: 5000
+Accuracy: 87.5 %
+Processing Time: 3.08 seconds
+
+6. COMPARISON
+--------------------------------------------------
+Method              Vocabulary    Accuracy    Time
+Without Stemming     5000 85.5 %       0.22 sec
+With Stemming        5000 87.5 %       3.08 sec
+
+7. INTERPRETATION
+Stemming before feature extraction reduces redundant vocabulary.
+It can reduce feature dimensionality and processing cost.
+However, aggressive stemming may remove useful semantic information.
+Therefore, preprocessing should be selected according to the task.
