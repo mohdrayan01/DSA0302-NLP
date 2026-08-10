@@ -1,0 +1,189 @@
+Question 1 Output: 
+======================================================================
+N-GRAM LANGUAGE MODEL
+======================================================================
+
+Choose N:
+1. Unigram
+2. Bigram
+3. Trigram
+Enter N: 2
+
+BIGRAM COUNTS AND PROBABILITIES
+------------------------------------------------------------
+<s> the                  Count=11    Probability=0.7857
+the student              Count=9     Probability=0.7500
+student is                   Count=8     Probability=0.8889
+the teacher              Count=3     Probability=0.2500
+teacher is                   Count=3     Probability=1.0000
+natural language             Count=2     Probability=1.0000
+language processing           Count=2     Probability=0.5000
+is learning             Count=2     Probability=0.1429
+machine learning             Count=2     Probability=1.0000
+is using                Count=2     Probability=0.1429
+using python               Count=2     Probability=1.0000
+python </s>                 Count=2     Probability=0.5000
+is a                    Count=2     Probability=0.1429
+is studying             Count=1     Probability=0.0714
+studying natural              Count=1     Probability=1.0000
+processing </s>                 Count=1     Probability=0.5000
+learning machine              Count=1     Probability=0.2500
+learning </s>                 Count=1     Probability=0.2500
+is reading              Count=1     Probability=0.0714
+reading a                    Count=1     Probability=1.0000
+a book                 Count=1     Probability=0.2000
+book </s>                 Count=1     Probability=1.0000
+is teaching             Count=1     Probability=0.0714
+teaching the                  Count=1     Probability=1.0000
+student </s>                 Count=1     Probability=0.1111
+is explaining           Count=1     Probability=0.0714
+explaining language             Count=1     Probability=1.0000
+language models               Count=1     Probability=0.2500
+models </s>                 Count=1     Probability=1.0000
+is writing              Count=1     Probability=0.0714
+writing a                    Count=1     Probability=1.0000
+a program              Count=1     Probability=0.2000
+program </s>                 Count=1     Probability=1.0000
+is solving              Count=1     Probability=0.0714
+solving a                    Count=1     Probability=1.0000
+a problem              Count=1     Probability=0.2000
+problem </s>                 Count=1     Probability=1.0000
+is preparing            Count=1     Probability=0.0714
+preparing for                  Count=1     Probability=1.0000
+for an                   Count=1     Probability=1.0000
+an examination          Count=1     Probability=0.5000
+examination </s>                 Count=1     Probability=1.0000
+<s> machine              Count=1     Probability=0.0714
+learning is                   Count=1     Probability=0.2500
+is an                   Count=1     Probability=0.0714
+an interesting          Count=1     Probability=0.5000
+interesting subject              Count=1     Probability=1.0000
+subject </s>                 Count=1     Probability=1.0000
+<s> natural              Count=1     Probability=0.0714
+processing is                   Count=1     Probability=0.5000
+a useful               Count=1     Probability=0.2000
+useful field                Count=1     Probability=1.0000
+field </s>                 Count=1     Probability=1.0000
+<s> python               Count=1     Probability=0.0714
+python is                   Count=1     Probability=0.2500
+a popular              Count=1     Probability=0.2000
+popular programming          Count=1     Probability=1.0000
+programming language             Count=1     Probability=0.5000
+language </s>                 Count=1     Probability=0.2500
+learning python               Count=1     Probability=0.2500
+python programming          Count=1     Probability=0.2500
+programming </s>                 Count=1     Probability=0.5000
+
+Enter incomplete sentence: an apple a day
+
+Top-5 Next Word Predictions:
+----------------------------------------
+No prediction available.
+
+Zero Probability Demonstration
+----------------------------------------
+Bigram P(student -> football) = 0.0
+Trigram P(student is football) = 0.0
+
+Evaluation
+----------------------------------------
+The student is -> learning
+The teacher is -> learning
+Python is -> learning
+The student is learning -> machine
+
+Predictions generated: 4
+
+
+Question 2 Output:
+======================================================================
+SMOOTHING AND BACKOFF LANGUAGE MODEL
+======================================================================
+Enter a sentence/query: an apple a day
+
+Prediction Results
+---------------------------------------------------------------------------
+Word           Unsmoothed     Backoff        Interpolation
+is             0.0000         0.1277         0.0255
+the            0.0000         0.1064         0.0213
+student        0.0000         0.0745         0.0149
+language       0.0000         0.0426         0.0085
+learning       0.0000         0.0426         0.0085
+
+
+Question 3 Output:
+================================================================================
+N-GRAM ENTROPY EVALUATION
+================================================================================
+
+Sentence: The student is learning Python.
+Unigram Entropy: 3.853
+Bigram Entropy: Infinity
+Trigram Entropy: Infinity
+
+Sentence: The teacher is teaching the student.
+Unigram Entropy: 4.0035
+Bigram Entropy: 1.2624
+Trigram Entropy: 0.8987
+
+Sentence: The cat is playing football.
+Unigram Entropy: Infinity
+Bigram Entropy: Infinity
+Trigram Entropy: Infinity
+
+Sentence: Natural language processing is useful.
+Unigram Entropy: 4.548
+Bigram Entropy: Infinity
+Trigram Entropy: Infinity
+
+================================================================================
+SMOOTHED BIGRAM ENTROPY
+================================================================================
+The student is learning Python.                         3.3703
+The teacher is teaching the student.                    3.3873
+The cat is playing football.                            4.5146
+Natural language processing is useful.                  4.1663
+
+================================================================================
+ENTROPY INTERPRETATION
+================================================================================
+Highest Entropy Sentence:
+The cat is playing football.
+Entropy: 4.5146
+
+Lowest Entropy Sentence:
+The student is learning Python.
+Entropy: 3.3703
+
+
+Question 4 Output:
+======================================================================
+PART-OF-SPEECH TAGGING SYSTEM
+======================================================================
+
+Penn Treebank-style POS tags are used.
+
+Enter an English sentence (or type 'exit'): An apple a day
+
+RULE-BASED TAGGER
+--------------------------------------------------
+an              DT
+apple           NN
+a               DT
+day             NN
+
+STOCHASTIC TAGGER
+--------------------------------------------------
+an              DT
+apple           NN
+a               VBZ
+day             NN
+
+TRANSFORMATION-BASED TAGGER
+--------------------------------------------------
+an              DT
+apple           NN
+a               DT
+day             NN
+
+Enter an English sentence (or type 'exit'): exit
