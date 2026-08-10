@@ -1,0 +1,97 @@
+Question 1 Output: 
+============================================================
+SMART MOBILE KEYBOARD PREDICTION SYSTEM
+============================================================
+
+1. MLE
+P(science|data) = 1.0
+
+2. BACKOFF
+P(improves|data,science) = 0
+P(improves|science) = 0
+P(improves) = 0.0
+Final Backoff Probability = 0.0
+
+3. DELETED INTERPOLATION
+Trigram = 0.6666666666666666
+Bigram = 0.6666666666666666
+Unigram = 0.14285714285714285
+Interpolated Probability = 0.5619047619047619
+
+4. ENTROPY
+Entropy = 0.9235 bits
+
+
+Question 2 Output:
+============================================================
+AI-POWERED CUSTOMER SUPPORT CHATBOT
+============================================================
+
+1. POS TAGGING
+
+Sentence 1:
+Book / VB
+a / DT
+flight / NN
+ticket / NN
+now / RB
+
+Sentence 2:
+This / DT
+book / NN
+is / VBZ
+interesting / JJ
+
+2. HMM PROBABILITY
+P(book,VB) = 0.3
+P(book,NN) = 0.2
+Prediction: VB
+
+3. TAGGING COMPARISON
+Rule-Based: Uses manually defined grammatical rules.
+HMM: Uses probabilities learned from training data.
+HMM is more suitable for large-scale systems.
+
+4. POS TAGSET
+VB = Verb
+NN = Noun
+JJ = Adjective
+RB = Adverb
+DT = Determiner
+VBZ = Third-person singular verb
+Standard POS tags improve intent detection and response generation.
+
+
+Question 3 Output:
+============================================================
+NEWS ANALYTICS AND POS TAG CORRECTION
+============================================================
+
+1. INITIAL TAGS
+economic / JJ
+growth / NN
+increases / NNS
+employment / NN
+
+AFTER TRANSFORMATION
+economic / JJ
+growth / NN
+increases / VBZ
+employment / NN
+
+2. CORRECTION
+increases changes from NNS to VBZ because it follows growth/NN.
+The singular subject 'growth' requires the singular verb 'increases'.
+
+3. FREQUENCY DISTRIBUTION
+Total = 1160
+economic Count = 120 Probability = 0.1034
+growth Count = 450 Probability = 0.3879
+increases Count = 210 Probability = 0.181
+employment Count = 380 Probability = 0.3276
+
+4. ENTROPY
+Before Transformation = 1.0 bits
+After Transformation = 0.469 bits
+Entropy decreased.
+Tagging uncertainty decreased and confidence increased.
