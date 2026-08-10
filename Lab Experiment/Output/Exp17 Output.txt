@@ -1,0 +1,53 @@
+Synset : bank.n.01
+Meaning: sloping land (especially the slope beside a body of water)
+
+Synset : depository_financial_institution.n.01
+Meaning: a financial institution that accepts deposits and channels the money into lending activities
+
+Synset : bank.n.03
+Meaning: a long ridge or pile
+
+Synset : bank.n.04
+Meaning: an arrangement of similar objects in a row or in tiers
+
+Synset : bank.n.05
+Meaning: a supply or stock held in reserve for future use (especially in emergencies)
+
+Synset : bank.n.06
+Meaning: the funds held by a gambling house or the dealer in some gambling games
+
+Synset : bank.n.07
+Meaning: a slope in the turn of a road or track; the outside is higher than the inside in order to reduce the effects of centrifugal force
+
+Synset : savings_bank.n.02
+Meaning: a container (usually with a slot in the top) for keeping money at home
+
+Synset : bank.n.09
+Meaning: a building in which the business of banking transacted
+
+Synset : bank.n.10
+Meaning: a flight maneuver; aircraft tips laterally about its longitudinal axis (especially in turning)
+
+Synset : bank.v.01
+Meaning: tip laterally
+
+Synset : bank.v.02
+Meaning: enclose with a bank
+
+Synset : bank.v.03
+Meaning: do business with a bank or keep an account at a bank
+
+Synset : bank.v.04
+Meaning: act as the banker in a game or in gambling
+
+Synset : bank.v.05
+Meaning: be in the banking business
+
+Synset : deposit.v.02
+Meaning: put into a bank account
+
+Synset : bank.v.07
+Meaning: cover with ashes so to control the rate of burning
+
+Synset : trust.v.01
+Meaning: have confidence or faith in

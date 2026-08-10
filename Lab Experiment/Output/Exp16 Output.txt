@@ -1,0 +1,2 @@
+Elon Musk -> PERSON
+California -> GPE

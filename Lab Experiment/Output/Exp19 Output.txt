@@ -1,0 +1,3 @@
+Word: bank
+Sense: Synset('savings_bank.n.02')
+Definition: a container (usually with a slot in the top) for keeping money at home
