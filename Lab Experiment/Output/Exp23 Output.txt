@@ -1,0 +1,3 @@
+Number of Sentences: 3
+Average words per sentence: 9.67
+Text appears coherent.

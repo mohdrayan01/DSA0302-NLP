@@ -1,0 +1,9 @@
+(S
+  (NP The/DT intelligent/JJ student/NN)
+  solved/VBD
+  (NP the/DT difficult/JJ problem/NN)
+  ./.)
+
+Noun Phrases:
+The intelligent student
+the difficult problem

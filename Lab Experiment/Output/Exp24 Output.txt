@@ -1,0 +1,2 @@
+Enter a sentence: Artificial Intelligence is transforming the world.
+Dialog Act: Statement

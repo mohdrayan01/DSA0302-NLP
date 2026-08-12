@@ -1,0 +1,5 @@
+Prompt:
+Write a short paragraph about Artificial Intelligence.
+
+Output:
+Artificial Intelligence (AI) is a branch of computer science that enables machines to perform tasks requiring human intelligence. It is widely used in healthcare, education, finance, and many other fields.
