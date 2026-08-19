@@ -1,0 +1,47 @@
+Question 1 Output:
+
+COREference Resolution
+-----------------------------------
+He -> John
+She -> Mary
+it -> ball
+him -> John
+they -> John, Mary and the dog
+
+Resolved Paragraph:
+John and Mary went to the park. John brought a ball. Mary wanted to play with the ball. The dog chased John excitedly. Finally, John, Mary and the dog all went home.
+
+
+Question 2 Output:
+
+User: I have an important exam tomorrow but I’m not able to concentrate.
+
+Generated Responses:
+
+Response 1 : Because your exam is important, take a short break and then focus on one topic at a time. Stay confident and trust yourself.
+
+Response 2 : Since your exam is tomorrow, take a short break if you cannot concentrate, then return and focus on one topic. You can feel confident by preparing step by step.      
+
+Response 3 : Take a short break if you cannot concentrate, then come back and focus on your exam one topic at a time. Stay confident and remember that you can do your best.       
+
+Best Response:
+Since your exam is tomorrow, take a short break if you cannot concentrate, then return and focus on one topic. You can feel confident by preparing step by step.
+
+
+Question 3 Output:
+
+Original Sentence:
+The bank by the river flooded after the storm, but it was saved by quick action.
+
+Word Sense:
+bank -> riverbank
+
+Predicate Logic:
+RiverBank(b)
+By(b,r)
+Flood(b)
+After(Flood(b),Storm(s))
+Saved(b,QuickAction(a))
+
+Paraphrase:
+The riverbank near the river flooded after the storm, but quick action saved it.

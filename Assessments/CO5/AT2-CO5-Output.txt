@@ -1,0 +1,83 @@
+Question 1 Output:
+REFERENCE RESOLUTION
+------------------------------
+He -> Ravi
+it -> book
+
+Resolved Discourse:
+Ravi met Arun at the library. Ravi borrowed a book and later returned the book.
+
+
+Question 2 Output:
+TEXT COHERENCE AND DISCOURSE STRUCTURE
+---------------------------------------------
+Sentence 1 : The roads were flooded after heavy rainfall.
+Sentence 2 : Therefore, schools were closed for the day.
+Sentence 3 : Students attended classes online.
+
+Discourse Relations:
+Sentence 1 -> Sentence 2 : Cause-Effect
+Sentence 2 -> Sentence 3 : Result/Sequence
+
+Discourse Structure:
+Heavy rainfall
+     ↓
+Roads flooded
+     ↓
+Schools closed
+     ↓
+Online classes
+
+
+Question 3 Output:
+DIALOGUE ACT IDENTIFICATION
+-----------------------------------
+User : Can you book a train ticket for me?
+Dialogue Act: Request
+
+Agent : Sure, where would you like to travel?
+Dialogue Act: Question
+
+User : I want to go to Chennai.
+Dialogue Act: Inform
+
+Agent : Your ticket has been booked.
+Dialogue Act: Confirmation
+
+Dialogue Act Sequence:
+Request -> Question -> Inform -> Confirmation
+
+
+Question 4 Output:
+LANGUAGE GENERATION
+-------------------------
+Semantic Representation: {'action': 'buy', 'agent': 'student', 'object': 'book', 'tense': 'past'}
+Generated Sentence: The student bought a book.
+
+Grammatical Validation:
+Subject: The student
+Verb: bought
+Object: a book
+Tense: Past
+Sentence is grammatically correct.
+
+
+Question 5 Output:
+INTERLINGUA-BASED MACHINE TRANSLATION
+---------------------------------------------
+Source Sentence: The boy is playing football.
+
+Interlingua Representation:
+action : play
+agent : boy
+object : football
+tense : present
+aspect : continuous
+
+Candidate Translations:
+लड़का फुटबॉल खेल रहा है। -> Score: 0.935
+लड़का फुटबॉल खेलता है। -> Score: 0.815
+लड़का फुटबॉल खेल रहा था। -> Score: 0.575
+
+Final Translation:
+लड़का फुटबॉल खेल रहा है।
