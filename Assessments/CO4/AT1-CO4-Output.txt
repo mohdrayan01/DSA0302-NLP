@@ -1,0 +1,139 @@
+Question 1 Output:
+SEMANTIC REPRESENTATION ANALYSIS
+
+Q1
+Query: Activate international roaming
+Action: ACTIVATE
+Object: Roaming
+Representation: ACTIVATE(Roaming, Customer)
+Actual Intent: Activate Roaming
+Predicted Intent: Activate Roaming
+Result: Correct
+
+Q2
+Query: Deactivate caller tune service
+Action: DEACTIVATE
+Object: Caller Tune
+Representation: DEACTIVATE(Caller Tune, Customer)
+Actual Intent: Deactivate Caller Tune
+Predicted Intent: Deactivate Caller Tune
+Result: Correct
+
+Q3
+Query: Check my data balance
+Action: QUERY
+Object: Data Balance
+Representation: QUERY(Data Balance, Customer)
+Actual Intent: Check Data Balance
+Predicted Intent: Query Data Balance
+Result: Correct
+
+Q4
+Query: Enable 5G service
+Action: ACTIVATE
+Object: 5G Service
+Representation: ACTIVATE(5G Service, Customer)
+Actual Intent: Enable 5G Service
+Predicted Intent: Activate 5G Service
+Result: Correct
+
+Recommendations:
+1. Use domain-specific vocabulary
+2. Handle synonyms such as activate and enable
+3. Handle negation
+4. Use context from previous messages
+5. Use entity recognition and confidence scores
+
+
+Question 2 Output:
+FIRST-ORDER PREDICATE CALCULUS
+
+Active(M1) -> Producing(M1)
+Active(M2) -> Producing(M2)
+Maintenance(M3) -> NOT Producing(M3)
+Active(M4) -> Producing(M4)
+
+Production Status:
+M1 : Producing
+M2 : Producing
+M3 : Not Producing
+M4 : Producing
+
+Available Products:
+Available(Gear)
+Available(Engine)
+Available(Pump)
+
+Gear Analysis:
+Total Gear production cannot be concluded from the given data.
+
+
+Question 3 Output:
+WORD SENSE DISAMBIGUATION
+
+Query: Apple accessories
+Possible Senses: ['Fruit', 'Technology Brand']
+Clicked Result: iPhone Charger
+Correct Sense: Technology Brand
+
+Query: Mouse wireless
+Possible Senses: ['Animal', 'Computer Device']
+Clicked Result: Bluetooth Mouse
+Correct Sense: Computer Device
+
+Query: Java tutorial
+Possible Senses: ['Island', 'Programming Language']
+Clicked Result: Coding Lessons
+Correct Sense: Programming Language
+
+Query: Python course
+Possible Senses: ['Snake', 'Programming Language']
+Clicked Result: Software Development Training
+Correct Sense: Programming Language
+
+Industrial WSD Improvements:
+1. Contextual embeddings
+2. Search history
+3. Click information
+4. Product categories
+5. Knowledge graphs
+6. Machine learning
+7. Personalization
+
+
+Question 4 Output:
+SYNTAX-DRIVEN SEMANTIC ANALYSIS
+
+Sentence: Doctor prescribed medicine patient
+Subject: Doctor
+Verb: prescribed
+Object: medicine
+Recipient: patient
+
+Sentence: Patient reported severe headache
+Subject: Patient
+Verb: reported
+Object: severe headache
+
+Sentence: Nurse monitored patient
+Subject: Nurse
+Verb: monitored
+Object: patient
+
+Sentence: Medicine reduced blood pressure
+Subject: Medicine
+Verb: reduced
+Object: blood pressure
+
+SEMANTIC ROLES
+Doctor -> Agent
+Medicine -> Instrument
+Patient -> Recipient
+Headache -> Symptom
+
+Improvement Methods:
+1. Dependency parsing
+2. Medical Named Entity Recognition
+3. Semantic Role Labeling
+4. Medical ontologies
+5. Domain-specific grammar

@@ -1,0 +1,160 @@
+Question 1 Output:
+CFG VS DEPENDENCY PARSING
+
+Sentence: The student reads a book.
+
+CFG Representation:
+S
+|-- NP
+|   |-- The
+|   |-- student
+|-- VP
+    |-- reads
+    |-- NP
+        |-- a
+        |-- book
+
+Dependency Representation:
+reads -> student ( subject )
+reads -> book ( object )
+student -> The ( determiner )
+book -> a ( determiner )
+
+Conclusion:
+CFG is better for phrase structure.
+Dependency parsing is better for direct word relationships.
+Dependency parsing is preferred for relation extraction and semantic analysis.
+
+
+Question 2 Output:
+TOP-DOWN VS EARLEY PARSING
+
+Input: Book a flight to Delhi
+
+Top-Down Parsing
+1. Start with S
+2. Expand S -> NP VP
+3. Generate possible grammar structures
+4. Match input
+5. Backtrack if required
+
+Earley Parsing
+1. Prediction
+2. Scanning
+3. Completion
+4. Store partial states in chart
+5. Continue when more input arrives
+
+Comparison:
+Feature | Top-Down | Earley
+Ambiguity | Limited | Good
+Incomplete Input | Poor | Good
+Backtracking | High | Reduced
+Memory | Low | Higher
+Complex Grammar | Less Suitable | More Suitable
+
+Recommended: Earley Parsing for dynamic and ambiguous input.
+
+
+Question 3 Output:
+AMBIGUITY ANALYSIS
+
+Sentence: She saw the man with a telescope.
+
+CFG:
+Interpretation 1 : She used a telescope to see the man.
+Interpretation 2 : The man had a telescope.
+
+PCFG Probabilities:
+She used a telescope to see the man. -> 0.7
+The man had a telescope. -> 0.3
+
+PCFG Selected Interpretation:
+She used a telescope to see the man.
+
+Neural Parsing:
+Uses contextual representations.
+Learns patterns from large datasets.
+Uses surrounding words to resolve ambiguity.
+
+Final Comparison:
+CFG -> Generates possible parses
+PCFG -> Ranks parses using probabilities
+Neural -> Uses learned contextual information
+
+Recommended for real-world applications: Neural Parsing
+
+
+Question 4 Output:
+FEATURE STRUCTURES VS SUBCATEGORIZATION
+
+Example 1: The student reads.
+
+Subject Features:
+{'word': 'student', 'person': 'Third', 'number': 'Singular'}
+Verb Features:
+{'word': 'reads', 'person': 'Third', 'number': 'Singular', 'tense': 'Present'}
+Agreement: Correct
+
+Example 2: The students reads.
+
+Subcategorization Frames:
+eat -> eat + NP
+give -> give + NP + NP
+depend -> depend + PP
+prescribe -> prescribe + NP + NP
+
+Medical Example:
+Doctor prescribed medicine to patient.
+Agent = Doctor
+Theme = Medicine
+Recipient = Patient
+
+Conclusion:
+Feature Structures -> Agreement and grammatical correctness
+Subcategorization -> Verb argument structures
+Best approach -> Combine both
+
+
+Question 5 Output:
+TRANSITION-BASED VS GRAPH-BASED PARSING
+
+Sentence: The student reads a book
+
+Transition-Based Parsing
+SHIFT: The
+SHIFT: student
+SHIFT: reads
+SHIFT: a
+SHIFT: book
+Final Stack: ['The', 'student', 'reads', 'a', 'book']
+
+Transition Actions:
+SHIFT
+REDUCE
+LEFT-ARC
+RIGHT-ARC
+
+Graph-Based Parsing
+Possible dependency relationships:
+reads -> student
+reads -> book
+student -> The
+book -> a
+
+Global Optimization:
+The parser evaluates possible dependency trees.
+The highest-scoring tree is selected.
+
+Comparison:
+Feature | Transition-Based | Graph-Based
+Decision Making | Local | Global
+Speed | Very Fast | Slower
+Memory | Low | Higher
+Error Propagation | Higher | Lower
+Long Distance Relations | Difficult | Better
+Large Scale Use | Suitable | More Expensive
+
+Recommendation:
+Transition-based parsing is preferred for large-scale and real-time applications.
+Graph-based parsing is preferred when global structural accuracy is more important.

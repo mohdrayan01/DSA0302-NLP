@@ -1,0 +1,127 @@
+Question 1 Output:
+BANKING CHATBOT SEMANTIC ANALYSIS
+
+Query: Show me the transactions with the card from last month
+
+CFG Rules:
+S -> VP
+VP -> V NP
+VP -> V NP PP
+NP -> Det N
+NP -> NP PP
+PP -> P NP
+
+Ambiguity:
+PP 'with the card' may attach to the transaction phrase.
+PP 'from last month' specifies the time period.
+
+PCFG Ranking:
+Transactions + Card + Last Month = 0.6
+Alternative PP attachment = 0.4
+Selected Interpretation: Transactions + Card + Last Month
+
+Feature Structure:
+Person = Third
+Number = Singular
+Tense = Present
+
+Final Semantic Representation:
+Intent = SHOW_TRANSACTIONS
+Payment_Method = CARD
+Time_Period = LAST_MONTH
+
+
+Question 2 Output:
+VOICE ASSISTANT PARSING
+
+Input: Book a flight to Delhi with a window seat
+
+Possible Parse 1:
+[Book [a flight to Delhi] [with a window seat]]
+
+Possible Parse 2:
+[Book [a flight [to Delhi with a window seat]]]
+
+Top-Down Parsing:
+Starts from S
+May require backtracking
+Poorer handling of incomplete input
+
+Earley Parsing:
+Uses chart parsing
+Prediction
+Scanning
+Completion
+Maintains multiple hypotheses
+
+Performance Comparison:
+
+ Top-Down
+Ambiguity : Limited
+Partial Input : Poor
+Backtracking : High
+Memory : Low
+
+ Earley
+Ambiguity : Good
+Partial Input : Good
+Backtracking : Reduced
+Memory : Higher
+
+Final Interpretation:
+Intent = BOOK_FLIGHT
+Destination = Delhi
+Seat Preference = Window
+
+
+Question 3 Output:
+HEALTHCARE NLP SYSTEM
+
+Input: The doctor who reviewed the patient last week recommends starting medication and scheduling a follow-up visit in Chennai.
+
+Tokens:
+['The', 'doctor', 'who', 'reviewed', 'the', 'patient', 'last', 'week', 'recommends', 'starting', 'medication', 'and', 'scheduling', 'a', 'follow-up', 'visit', 'in', 'Chennai']    
+
+Medical Entities:
+doctor -> Person/Medical Entity
+patient -> Medical Entity
+medication -> Treatment
+Chennai -> Location
+
+CFG Structure:
+S -> NP VP
+NP -> Det N RelClause
+VP -> V GerundPhrase
+VP -> VP Conjunction VP
+
+Feature Structure:
+Doctor -> Number = Singular
+Recommends -> Number = Singular
+Agreement = Correct
+
+Semantic Analysis:
+REVIEW(Doctor, Patient, Last_Week)
+RECOMMEND(Doctor, Start(Medication))
+RECOMMEND(Doctor, Schedule(Follow_Up_Visit))
+LOCATION(Follow_Up_Visit, Chennai)
+
+Structured Output:
+Agent : Doctor
+Reviewed Entity : Patient
+Review Time : Last Week
+Main Action : Recommend
+Treatment : Starting Medication
+Follow-up Action : Schedule Follow-up Visit
+Location : Chennai
+Diagnosis : Not Specified
+
+Subcategorization Frames:
+RECOMMEND -> Doctor + Treatment/Action
+PRESCRIBE -> Doctor + Medicine + Patient
+REVIEW -> Doctor + Patient/Report
+MONITOR -> Doctor/Nurse + Patient
+SCHEDULE -> Agent + Appointment
+DIAGNOSE -> Doctor + Patient + Condition
+
+Real-Time Processing Pipeline:
+Input -> Queue -> Preprocessing -> NER/POS -> Parsing -> Semantic Analysis -> Database
